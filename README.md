@@ -3,7 +3,7 @@
 **Team Yogic · Pune · NASA Space Apps Challenge 2026**
 Challenge: *Create Health Monitoring Software for Astronauts on Space Missions*
 
-**Live app:** https://nischayanay.github.io/prana/
+**Code:** https://github.com/Nischayanay/prana
 
 On the way to Mars, a question to a flight surgeon can take 40 minutes to answer. **PRANA** is an
 offline-first, on-board health companion. It gathers health indicators, compares them with **each
