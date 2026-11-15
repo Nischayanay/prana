@@ -39,7 +39,8 @@ export function AppProvider({ children }: { children: ReactNode }) {
   const [overrides, setOverrides] = useLocal<Overrides>('prana.overrides', {});
   const [progress, setProgress] = useLocal<Progress>('prana.progress', { done: {}, xp: 0 });
   const [focusMetric, setFocusMetric] = useState<MetricKey | null>(null);
-  const [tab, setTab] = useState('today');
+  const [tab, setTabRaw] = useState('home');
+  const setTab = (t: string) => { setTabRaw(t); window.scrollTo({ top: 0 }); };
 
   const generated = useMemo(() => generateMission(mission), [mission]);
   const allRecords = useMemo(() => {

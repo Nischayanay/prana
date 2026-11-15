@@ -14,16 +14,18 @@ action, so the crew can evaluate and act on their health without waiting for Ear
 
 | Screen | What the astronaut gets |
 |---|---|
-| **Today** | One Readiness score, the **5 NASA spaceflight hazards** (Radiation, Isolation, Distance, Gravity, Hostile environment) colour-coded, today's priorities and a countermeasure checklist |
-| **Body map** | Clickable human figure: brain, eyes, heart, lungs, bones, muscles, immune system, metabolism, each with status, what spaceflight does to it, and what to do |
-| **Trends** | 18 indicators over the mission vs. the astronaut's personal pre-flight band and safety limits |
-| **Check-in** | 60-second daily log (BP, HR, temperature, blood sugar, SpO₂, sleep, mood, stress, symptoms) with how-to-measure guides; the assessment updates instantly |
-| **Self-tests** | Real, playable **Psychomotor Vigilance Test** (fatigue) and **Amsler grid** vision test (SANS screening) |
-| **Routine & XP** | Daily/weekly health routine, XP, streaks and badges that reward self-care rather than "good numbers" |
-| **Radiation** | Cumulative dose vs. the NASA 600 mSv career limit, solar-storm shelter protocol, **live NASA DONKI** space-weather alerts (offline cache fallback) |
-| **Earth link** | Delay-tolerant messaging to the flight surgeon with real light-time delay (Moon 1.3 s, Mars 3–22 min); the astronaut chooses which data categories are shared |
-| **Real crew data** | **Real NASA OSDR data** from the Inspiration4 crew: shows that personal baselines catch post-flight changes that lab population ranges miss |
-| **About & demo** | One-click guided scenarios (CO₂ fault, solar storm, viral reactivation, deconditioning, isolation, SANS) |
+| **Today** | Readiness score, alerts, 6 key vitals vs *your own* normal, today's countermeasure plan, the **5 NASA spaceflight hazards** |
+| **Daily check** | Guided 6-step, ~5-minute check with how-to-measure instructions: BP, HR, SpO₂, temperature, blood sugar, sleep, mood, stress, symptoms, a playable **reaction-time test (PVT)** and an **Amsler vision grid** (SANS) |
+| **Symptom guide** | Step-by-step treatment for 9 common spaceflight complaints: danger-sign check → self-care → medical kit → recheck, with escalation |
+| **Body map** | Clickable human figure; each body system is coloured by status and explained |
+| **Trends** | 18 indicators over the mission vs personal pre-flight band and safety limits |
+| **Routine & rewards** | Daily routine, XP, streaks and badges that reward self-care, not "good numbers" |
+| **Radiation & air** | Dose vs the NASA 600 mSv career limit, storm-shelter protocol, **live NASA DONKI** alerts, cabin CO₂ |
+| **Earth link** | Delay-tolerant messaging with real light-time delay; the astronaut controls what is shared |
+| **Real crew data** | **Real NASA OSDR** Inspiration4 blood data: personal baselines catch changes that lab ranges miss |
+| **About & demo** | Guided scenarios; a Simulation panel to switch mission, astronaut and day |
+
+UI built with [Untitled UI React](https://github.com/untitleduico/react) (MIT): Tailwind CSS v4 + React Aria.
 
 Mission environments: Space Station, Lunar Base, Mars Transit, Mars Base. Each changes gravity, radiation
 dose rate and communication delay.
@@ -61,7 +63,7 @@ Runs entirely in the browser: no server, works offline, data stays on the device
 **Simulated data:** the 180-day crew streams are **synthetic** (`src/lib/generate.ts`), generated from
 published spaceflight rates, and labelled "SIMULATED" in the app. Crew members are fictional.
 
-**Open-source tools:** React, Vite, TypeScript, Recharts.
+**Open-source tools:** React, Vite, TypeScript, Tailwind CSS, Untitled UI React (MIT), React Aria, Recharts, Inter font.
 
 ## Use of AI (Super Intelligence)
 
